@@ -1,5 +1,5 @@
 # Check the updates on
-# http://github.com/chexov/unixscripts/tree/master/aws-cli/
+# http://github.com/chexov/aws-cli
 
 Description
 ===========
@@ -11,15 +11,14 @@ And will run them from that place and not from /usr/local.
 
 Installation
 ============
-mkdir ~/amazon
-cp profile ~/amazon/
-cp update-tools.sh ~/amazon/
-~/amazon/update-tools.sh
+git clone http://github.com/chexov/aws-cli
+cd aws-cli
+./update-tools.sh
 
 To apply the environment:
-. ~/amazon/profile
+. ./profile
 
-You may want add this line to your ~/.profile, I guess..
+You may want add aws-cli/profile file to your ~/.profile
 
 Have a happy day.
 
