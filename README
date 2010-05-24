@@ -1,0 +1,25 @@
+# Check the updates on
+# http://github.com/chexov/unixscripts/tree/master/aws-cli/
+
+Description
+===========
+This scripts may help you to install all the AWS tools in one shot
+in your home dir.
+And will run them from that place and not from /usr/local.
+
+
+
+Installation
+============
+mkdir ~/amazon
+cp profile ~/amazon/
+cp update-tools.sh ~/amazon/
+~/amazon/update-tools.sh
+
+To apply the environment:
+. ~/amazon/profile
+
+You may want add this line to your ~/.profile, I guess..
+
+Have a happy day.
+
