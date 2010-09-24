@@ -29,12 +29,12 @@ if [ ! "$JAVA_HOME" ]; then
     esac
 fi
 
-export EC2_AMITOOL_HOME=$BASE_DIR/ec2-ami-tools-1.3-49953
-export EC2_API_HOME=$BASE_DIR/ec2-api-tools-1.3-51254
-export AWS_ELB_HOME=$BASE_DIR/ElasticLoadBalancing-1.0.9.3
-export AWS_CLOUD_WATCH_HOME=$BASE_DIR/CloudWatch-1.0.2.3
 export AWS_AUTO_SCALING_HOME=$BASE_DIR/AutoScaling-1.0.9.0
-export AWS_RDS_HOME=$BASE_DIR/RDSCli-1.1.005
+export AWS_CLOUD_WATCH_HOME=$BASE_DIR/CloudWatch-1.0.2.3
+export AWS_ELB_HOME=$BASE_DIR/ElasticLoadBalancing-1.0.9.3
+export EC2_API_HOME=$BASE_DIR/ec2-api-tools-1.3-57419
+export EC2_AMITOOL_HOME=$BASE_DIR/ec2-ami-tools-1.3-56066
+export AWS_RDS_HOME=$BASE_DIR/RDSCli-1.2.006
 
 
 export EC2_HOME=$EC2_API_HOME
