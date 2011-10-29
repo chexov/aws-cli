@@ -3,9 +3,9 @@
 
 Description
 ===========
-This scripts may help you to install all the AWS tools in one shot
+These scripts may help you to install all the AWS tools in one shot
 in your home dir.
-And will run them from that place and not from /usr/local.
+And you will run them from your home dir not from /usr/local.
 
 
 
@@ -18,7 +18,7 @@ cd aws-cli
 To apply the environment:
 . ./profile
 
-You may want add aws-cli/profile file to your ~/.profile
+You may want to add aws-cli/profile file to your ~/.profile
 
-Have a happy day.
+Have a happy coding.
 
