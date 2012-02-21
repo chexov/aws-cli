@@ -3,11 +3,11 @@
 #set -x
 case $(uname -s) in
     Darwin)
-        fpath=$(cd $(dirname $0) && pwd && cd $oldpwd)
+        fpath=$(cd $(dirname $0) && pwd && cd $OLDPWD)
     ;;
     *)
         if [ -z "$BASH_SOURCE" ]; then
-            fpath=$(cd $(dirname $(readlink -f $0)) && pwd && cd $oldpwd)
+            fpath=$(cd $(dirname $(readlink -f $0)) && pwd && cd $OLDPWD)
         else
             fpath=$(cd $(dirname $(readlink -f $BASH_SOURCE)) && pwd && cd $OLDPWD)
         fi
