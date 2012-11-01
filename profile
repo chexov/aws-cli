@@ -1,22 +1,6 @@
 #!/bin/sh
-# use this file as "source ./profile"
-#set -x
-case $(uname -s) in
-    Darwin)
-        fpath=$(cd $(dirname $0) && pwd && cd $OLDPWD)
-    ;;
-    *)
-        if [ -z "$BASH_SOURCE" ]; then
-            fpath=$(cd $(dirname $(readlink -f $0)) && pwd && cd $OLDPWD)
-        else
-            fpath=$(cd $(dirname $(readlink -f $BASH_SOURCE)) && pwd && cd $OLDPWD)
-        fi
-    ;;
-esac
 
-
-BASE_DIR=$fpath
-
+BASE_DIR=${1:-$PWD}
 
 if [ ! "$JAVA_HOME" ]; then
     case $(uname -s) in
@@ -29,13 +13,12 @@ if [ ! "$JAVA_HOME" ]; then
     esac
 fi
 
-export AWS_AUTO_SCALING_HOME=$BASE_DIR/AutoScaling-1.0.9.0
-export AWS_CLOUD_WATCH_HOME=$BASE_DIR/CloudWatch-1.0.2.3
-export AWS_ELB_HOME=$BASE_DIR/ElasticLoadBalancing-1.0.9.3
-export EC2_API_HOME=$BASE_DIR/ec2-api-tools-1.3-57419
-export EC2_AMITOOL_HOME=$BASE_DIR/ec2-ami-tools-1.3-56066
-export AWS_RDS_HOME=$BASE_DIR/RDSCli-1.2.006
-
+export AWS_AUTO_SCALING_HOME=$BASE_DIR/AutoScaling-1.0.61.1
+export AWS_CLOUD_WATCH_HOME=$BASE_DIR/CloudWatch-1.0.13.4
+export AWS_ELB_HOME=$BASE_DIR/ElasticLoadBalancing-1.0.17.0
+export EC2_API_HOME=$BASE_DIR/ec2-api-tools-1.6.4
+export EC2_AMITOOL_HOME=$BASE_DIR/ec2-ami-tools-1.4.0.7
+export AWS_RDS_HOME=$BASE_DIR/RDSCli-1.10.003
 
 export EC2_HOME=$EC2_API_HOME
 export SERVICE_HOME=$AWS_ELB_HOME
